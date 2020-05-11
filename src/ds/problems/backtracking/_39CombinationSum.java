@@ -1,4 +1,4 @@
-package ds.problems.math;
+package ds.problems.backtracking;
 
 import java.util.*;
 

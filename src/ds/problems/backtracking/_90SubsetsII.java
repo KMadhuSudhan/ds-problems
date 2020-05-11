@@ -1,4 +1,4 @@
-package ds.problems.math;
+package ds.problems.backtracking;
 //https://leetcode.com/problems/subsets-ii/
 //90. Subsets II
 
