@@ -1,4 +1,4 @@
-package ds.problems.array;
+package ds.problems.slidingwindow;
 //https://leetcode.com/problems/max-consecutive-ones/
 //485. Max Consecutive Ones
 

@@ -1,4 +1,4 @@
-package ds.problems.array;
+package ds.problems.slidingwindow;
 //https://leetcode.com/problems/max-consecutive-ones-iii/
 //1004. Max Consecutive Ones III
 

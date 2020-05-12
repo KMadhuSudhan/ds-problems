@@ -1,4 +1,4 @@
-package ds.problems.array;
+package ds.problems.maps;
 //https://leetcode.com/problems/find-lucky-integer-in-an-array/submissions/
 //1394. Find Lucky Integer in an Array
 
