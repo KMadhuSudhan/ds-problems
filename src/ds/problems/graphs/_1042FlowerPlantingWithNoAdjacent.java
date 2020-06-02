@@ -5,7 +5,7 @@ package ds.problems.graphs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlowerPlantingWithNoAdjacent {
+public class _1042FlowerPlantingWithNoAdjacent {
 
     public int[] gardenNoAdj(int N, int[][] paths) {
         List<List<Integer>> graph = new ArrayList();
