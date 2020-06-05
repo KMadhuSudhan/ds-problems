@@ -2,11 +2,8 @@ package ds.problems.array;
 //https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/
 //873. Length of Longest Fibonacci Subsequence
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
-//https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/
-//873. Length of Longest Fibonacci Subsequence
 
 public class _873LengthOfLongestFibonacciSubsequence {
     public static void main(String[] args) {
