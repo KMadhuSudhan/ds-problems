@@ -1,0 +1,37 @@
+package ds.problems.system.design;
+//https://leetcode.com/problems/print-in-order/
+//1114. Print in Order
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class _1114PrintinOrder {
+
+    private AtomicInteger firstJobDone = new AtomicInteger(0);
+    private AtomicInteger secondJobDone = new AtomicInteger(0);
+
+    public _1114PrintinOrder() {
+
+    }
+
+    public void first(Runnable printFirst) throws InterruptedException {
+
+        // printFirst.run() outputs "first". Do not change or remove this line.
+        printFirst.run();
+        firstJobDone.incrementAndGet();
+    }
+
+    public void second(Runnable printSecond) throws InterruptedException {
+
+        // printSecond.run() outputs "second". Do not change or remove this line.
+        while(firstJobDone.get()!=1);
+        printSecond.run();
+        secondJobDone.incrementAndGet();
+    }
+
+    public void third(Runnable printThird) throws InterruptedException {
+
+        // printThird.run() outputs "third". Do not change or remove this line.
+        while(secondJobDone.get()!=1);
+        printThird.run();
+    }
+}
