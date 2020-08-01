@@ -21,34 +21,54 @@ public class _1138AlphabetBoardPath {
     }
 
     public String alphabetBoardPath(String target) {
-        char[] chars = target.toCharArray();
-        boolean[][] visited = new boolean[6][5];
-        dfs(0, 0, chars, 0, ' ', visited, new StringBuilder());
-        return ans;
-    }
-
-    void dfs(int row, int col, char[] target, int index, char direction, boolean[][] visited, StringBuilder currentPath) {
-        if (index == target.length) {
-            if (currentPath.length() < minLength) {
-                minLength = currentPath.length();
-                ans = currentPath.toString();
+        StringBuilder sb = new StringBuilder();
+        int[][] map = new int[26][2];
+        for(int i=0;i<26;i++) {
+            map[i] = new int[]{i/5,i%5};
+        }
+        int[] prev = new int[]{0, 0};
+        for (char c: target.toCharArray()) {
+            int x = map[c - 'a'][0] - prev[0];
+            int y = map[c - 'a'][1] - prev[1];
+            if (prev[0] == 5) {
+                while (x < 0) {
+                    sb.append('U');
+                    x++;
+                }
+                while (y > 0) {
+                    sb.append('R');
+                    y--;
+                }
+            } else if (map[c - 'a'][0] == 5) {
+                while (y < 0) {
+                    sb.append('L');
+                    y++;
+                }
+                while (x > 0) {
+                    sb.append('D');
+                    x--;
+                }
+            } else {
+                while (x > 0) {
+                    sb.append('D');
+                    x--;
+                }
+                while (x < 0) {
+                    sb.append('U');
+                    x++;
+                }
+                while (y > 0) {
+                    sb.append('R');
+                    y--;
+                }
+                while (y < 0) {
+                    sb.append('L');
+                    y++;
+                }
             }
-            return;
+            sb.append('!');
+            prev = map[c - 'a'];
         }
-        if (row < 0 || col < 0 || row >= 6 || col >= 5 || visited[row][col]) {
-            return;
-        }
-        visited[row][col] = true;
-        if (board[row][col] == target[index]) {
-            currentPath.append('!');
-            index++;
-        } else {
-            currentPath.append(direction);
-        }
-        dfs(row + 1, col, target, index, 'U', visited, currentPath);
-        dfs(row - 1, col, target, index, 'D', visited, currentPath);
-        dfs(row, col + 1, target, index, 'R', visited, currentPath);
-        dfs(row, col + 1, target, index, 'L', visited, currentPath);
-        currentPath.delete(currentPath.length()-1,currentPath.length());
+        return sb.toString();
     }
 }
