@@ -4,6 +4,7 @@ package ds.problems.string;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 
 public class _1487MakingFileNamesUnique {
     public String[] getFolderNames(String[] names) {
@@ -26,6 +27,8 @@ public class _1487MakingFileNamesUnique {
                 ans[i] = tempName;
             }
         }
+        Stack<String> strings = new Stack<>();
+        strings.removeAllElements();
         return ans;
     }
 }
