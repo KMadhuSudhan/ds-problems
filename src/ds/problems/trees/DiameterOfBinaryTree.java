@@ -2,7 +2,6 @@ package ds.problems.trees;
 //https://leetcode.com/problems/diameter-of-binary-tree/
 //543. Diameter of Binary Tree
 
-import com.sun.tools.hat.internal.model.HackJavaValue;
 
 public class DiameterOfBinaryTree {
     public static void main(String[] args) {
