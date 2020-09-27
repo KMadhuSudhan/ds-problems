@@ -2,6 +2,8 @@ package ds.problems.graphs;
 //https://leetcode.com/problems/course-schedule/
 //207. Course Schedule
 
+import javafx.util.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 
