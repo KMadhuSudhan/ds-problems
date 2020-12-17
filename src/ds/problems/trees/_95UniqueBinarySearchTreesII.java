@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _95UniqueBinarySearchTreesII {
+    public static void main(String[] args) {
+        _95UniqueBinarySearchTreesII uniqueBinarySearchTreesII = new _95UniqueBinarySearchTreesII();
+        uniqueBinarySearchTreesII.generateTrees(5);
+    }
     public List<TreeNode> generateTrees(int n) {
         if(n == 0) return new ArrayList();
         return constructTree(1,n);

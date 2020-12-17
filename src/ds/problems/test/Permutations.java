@@ -25,7 +25,7 @@ public class Permutations {
         }
         for (int i=start;i<arr.length;i++) {
             swap(arr,start,i);
-            permutations(arr,ans,i+1);
+            permutations(arr,ans,start+1);
             swap(arr,start,i);
         }
     }
@@ -35,6 +35,7 @@ public class Permutations {
         arr[i] = arr[j];
         arr[j] = tmp;
     }
+
     List<Integer> getList(int[] arr) {
         List<Integer> list = new ArrayList<>();
         for(int num: arr) {

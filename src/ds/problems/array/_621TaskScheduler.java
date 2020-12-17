@@ -1,7 +1,7 @@
 package ds.problems.array;
 //https://leetcode.com/problems/task-scheduler/
 //621. Task Scheduler
-
+//https://leetcode.com/problems/task-scheduler/discuss/760131/Java-Concise-Solution-Intuition-Explained-in-Detail
 import java.util.Arrays;
 
 public class _621TaskScheduler {

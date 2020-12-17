@@ -9,7 +9,7 @@ import java.util.Stack;
 public class _84LargestRectangleinHistogram {
     public int largestRectangleArea(int[] a) {
         Stack<Integer> stack = new Stack<>();
-        int i=0,area=0,maxArea=0;
+        int i=0,area=0,maxArea=0;//4,3
         while(i<a.length) {
             if(stack.isEmpty() || a[stack.peek()] <= a[i]) {
                 stack.push(i++);

@@ -1,0 +1,59 @@
+#nginx
+docker run -d -p8000:80 -v /home/client_21206_2/workspace/volume/loadbalancers/elb_1:/etc/nginx/conf.d/ nginx
+
+docker run -d -p8001:80 -v /home/client_21206_2/workspace/volume/loadbalancers/elb_2:/etc/nginx/conf.d/ nginx
+
+docker run -d -p8002:80 -v /home/client_21206_2/workspace/volume/loadbalancers/elb_3:/etc/nginx/conf.d/ nginx
+
+docker run -d -p8003:80 -v /home/client_21206_2/workspace/volume/loadbalancers/elb_4:/etc/nginx/conf.d/ nginx
+
+docker run -d -p8004:80 -v /home/client_21206_2/workspace/volume/loadbalancers/elb_5:/etc/nginx/conf.d/ nginx
+
+
+#orch
+docker run -e DB_NAME='pricing_1.db' -e LOG_FILE_NAME='orch_1' -e TO_MAIL_ID='pauljohn100@hash.fyi' -d -p9000:9000 -v /home/client_21206_2/workspace/volume:/home/src/data orch
+
+docker run -e DB_NAME='pricing_2.db' -e LOG_FILE_NAME='orch_2' -e TO_MAIL_ID='pauljohn101@hash.fyi' -d -p9001:9000 -v /home/client_21206_2/workspace/volume:/home/src/data orch
+
+docker run -e DB_NAME='pricing_3.db' -e LOG_FILE_NAME='orch_3' -e TO_MAIL_ID='pauljohn101@hash.fyi' -d -p9002:9000 -v /home/client_21206_2/workspace/volume:/home/src/data orch
+
+docker run -e DB_NAME='pricing_4.db' -e LOG_FILE_NAME='orch_4' -e TO_MAIL_ID='pauljohn101@hash.fyi' -d -p9003:9000 -v /home/client_21206_2/workspace/volume:/home/src/data orch
+
+docker run -e DB_NAME='pricing_5.db' -e LOG_FILE_NAME='orch_5' -e TO_MAIL_ID='pauljohn101@hash.fyi' -d -p9004:9000 -v /home/client_21206_2/workspace/volume:/home/src/data orch
+
+#unknown
+docker run -e DB_NAME='unknown_provider_1.db' -e LOG_FILE_NAME='unknown_1' -d -p9005:9002 -v /home/client_21206_2/workspace/volume:/home/src/data unknown
+
+docker run -e DB_NAME='unknown_provider_2.db' -e LOG_FILE_NAME='unknown_2' -d -p9006:9002 -v /home/client_21206_2/workspace/volume:/home/src/data unknown
+
+docker run -e DB_NAME='unknown_provider_3.db' -e LOG_FILE_NAME='unknown_3' -d -p9007:9002 -v /home/client_21206_2/workspace/volume:/home/src/data unknown
+
+docker run -e DB_NAME='unknown_provider_4.db' -e LOG_FILE_NAME='unknown_4' -d -p9008:9002 -v /home/client_21206_2/workspace/volume:/home/src/data unknown
+
+docker run -e DB_NAME='unknown_provider_5.db' -e LOG_FILE_NAME='unknown_5' -d -p9009:9002 -v /home/client_21206_2/workspace/volume:/home/src/data unknown
+
+
+#incognito
+docker run -e DB_NAME='incognito_provider_1.db' -e LOG_FILE_NAME='incognito_1' -d -p9010:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_1.db' -e LOG_FILE_NAME='incognito_2' -d -p9011:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_2.db' -e LOG_FILE_NAME='incognito_3' -d -p9012:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_2.db' -e LOG_FILE_NAME='incognito_4' -d -p9013:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_2.db' -e LOG_FILE_NAME='incognito_5' -d -p9014:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_2.db' -e LOG_FILE_NAME='incognito_6' -d -p9015:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_2.db' -e LOG_FILE_NAME='incognito_7' -d -p9016:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_2.db' -e LOG_FILE_NAME='incognito_8' -d -p9017:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_2.db' -e LOG_FILE_NAME='incognito_9' -d -p9018:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+docker run -e DB_NAME='incognito_provider_2.db' -e LOG_FILE_NAME='incognito_10' -d -p9019:9003 -v /home/client_21206_2/workspace/volume:/home/src/data incognito
+
+
+
+
